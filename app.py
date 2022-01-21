@@ -29,7 +29,7 @@ def webscrapping():
             count_BigBoxes = len(list(BigBoxes))
             # table = mydb[searchString]
             reviews = []
-            for i in range(0, 5):
+            for i in range(0, 1):
                 productUrl = flipkart_url + BigBoxes[i].a['href']
                 uProduct = uReq(productUrl)
                 uProductData = uProduct.read()
