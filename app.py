@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request
 from bs4 import BeautifulSoup as bs
 from urllib.request import urlopen as uReq
+from flask_cors import CORS, cross_origin
 # import pymongo
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/',methods=['GET'])
+@cross_origin()
 def homepage():
     return render_template('index.html')
 
